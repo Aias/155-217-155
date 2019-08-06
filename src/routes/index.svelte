@@ -10,14 +10,10 @@
 
 <script>
 	export let poems;
-
-	$: {
-		console.log(poems);
-	}
 </script>
 
 <svelte:head>
-	<title>thirty(one) days of poetry</title>
+	<title>thirty(one) days of haiku</title>
 </svelte:head>
 
 <header>
@@ -26,7 +22,7 @@
 		<span>two&nbsp;hundred&nbsp;seventeen</span> /
 		<span>one&nbsp;hundred&nbsp;fifty-five</span>
 	</h2>
-	<h3>stupid poems for a stupid girl</h3>
+	<h3>stupid poems for an annoying girl</h3>
 </header>
 
 <main>
@@ -69,7 +65,7 @@
 
 	small {
 		position: absolute;
-		top: 0.25rem;
+		top: 0.5rem;
 		right: 0.5rem;
 	}
 
