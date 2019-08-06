@@ -5,6 +5,6 @@ date: 2019-08-04
 published: true
 ---
 
-Me and Marilyn
-are not boyfriend and girlfriend
-—we hate each other.
+We—the two of us—
+are not boyfriend and girlfriend.
+We hate each other.
