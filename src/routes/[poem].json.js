@@ -1,24 +1,19 @@
-import poems from './_poems.js';
-
-const lookup = new Map();
-poems.forEach(poem => {
-	lookup.set(poem.id, JSON.stringify(poem));
-});
+import { getPoem } from './_poems.js';
 
 export function get(req, res, next) {
-	const { poem } = req.params;
+	const { poem: slug } = req.params;
 
-	if (lookup.has(poem)) {
+	let poem = getPoem(slug);
+
+	if (typeof poem === 'object') {
 		res.writeHead(200, {
 			'Content-Type': 'application/json'
 		});
-
-		res.end(lookup.get(poem));
+		res.end(JSON.stringify(poem));
 	} else {
 		res.writeHead(404, {
 			'Content-Type': 'application/json'
 		});
-
 		res.end(
 			JSON.stringify({
 				message: `Not found`

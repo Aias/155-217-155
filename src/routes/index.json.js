@@ -1,11 +1,11 @@
-import poems from './_poems.js';
+import { getPoems } from './_poems.js';
 
-const contents = JSON.stringify(poems);
+const poems = JSON.stringify(getPoems());
 
 export function get(req, res) {
 	res.writeHead(200, {
 		'Content-Type': 'application/json'
 	});
 
-	res.end(contents);
+	res.end(poems);
 }

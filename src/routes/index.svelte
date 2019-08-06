@@ -10,14 +10,18 @@
 
 <script>
 	export let poems;
+
+	$: {
+		console.log(poems);
+	}
 </script>
 
 <svelte:head>
 	<title>thirty(one) days of poetry</title>
 </svelte:head>
 
-{#each poems as {id, title}}
+{#each poems as {slug, title}}
 <div>
-	<a href="{`/${id}`}">{title}</a>
+	<a href="{`/${slug}`}">{slug}</a>
 </div>
 {/each}
