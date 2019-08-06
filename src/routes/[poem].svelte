@@ -16,5 +16,9 @@
 </script>
 
 <h2>
-	{poem.title}
+	{poem.meta.title}
 </h2>
+
+<div>
+	{@html poem.html}
+</div>

@@ -20,8 +20,8 @@
 	<title>thirty(one) days of poetry</title>
 </svelte:head>
 
-{#each poems as {slug, title}}
+{#each poems as {slug, meta}}
 <div>
-	<a href="{`/${slug}`}">{slug}</a>
+	<a href="{`/${slug}`}">{meta.title}</a>
 </div>
 {/each}
