@@ -10,48 +10,31 @@
 
 <script>
 	export let poems;
+
+	const formatDate = dateString => {
+		let d = new Date(dateString);
+		let year = d.getFullYear();
+		let month = d.getMonth();
+		let day = d.getDate();
+
+		return `${year}.${month}.${day}`;
+	};
 </script>
 
-<svelte:head>
-	<title>thirty(one) days of haiku</title>
-</svelte:head>
-
-<header>
-	<h2>
-		<span>one&nbsp;hundred&nbsp;fifty-five</span> /
-		<span>two&nbsp;hundred&nbsp;seventeen</span> /
-		<span>one&nbsp;hundred&nbsp;fifty-five</span>
-	</h2>
-	<h3>stupid poems for an annoying girl</h3>
-</header>
-
-<main>
+<div>
 	{#each poems as {slug, meta, html}}
 	<article>
-		<h4 href="{`/${slug}`}">{meta.title}</h4>
+		<h4 href="{`/${slug}`}">{formatDate(meta.date)} . {meta.title}</h4>
 		<section>
 			{@html html}
 		</section>
 		<small>{31 - meta.order}</small>
 	</article>
 	{/each}
-</main>
+</div>
 
 <style>
-	header {
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-
-	h2 > span {
-		white-space: nowrap;
-	}
-
-	h3 {
-		font-weight: 200;
-	}
-
-	main {
+	div {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 1rem;

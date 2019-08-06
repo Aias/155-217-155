@@ -1,7 +1,7 @@
 ---
 title: blueberries
 order: 2
-date: 2019-08-06
+date: 2019-08-06T00:00:00-05:00
 published: true
 ---
 

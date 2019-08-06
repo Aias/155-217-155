@@ -1,7 +1,7 @@
 ---
 title: hate
 order: 0
-date: 2019-08-04
+date: 2019-08-04T00:00:00-05:00
 published: true
 ---
 
