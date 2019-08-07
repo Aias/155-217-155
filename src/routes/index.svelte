@@ -22,6 +22,14 @@
 </script>
 
 <div>
+	<header>
+		<h2>
+			<span>one&nbsp;hundred&nbsp;fifty-five</span> /
+			<span>two&nbsp;hundred&nbsp;seventeen</span> /
+			<span>one&nbsp;hundred&nbsp;fifty-five</span>
+		</h2>
+		<h3>stupid poems for an annoying girl</h3>
+	</header>
 	{#each poems as {slug, meta, html}}
 	<article>
 		<h4 href="{`/${slug}`}">{formatDate(meta.date)} . {meta.title}</h4>
@@ -34,10 +42,38 @@
 </div>
 
 <style>
+	h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	h2 > span {
+		white-space: nowrap;
+	}
+
+	h3 {
+		font-weight: 200;
+		margin: 0;
+	}
+
 	div {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 1rem;
+	}
+
+	header {
+		order: -2;
+	}
+
+	article:first-of-type {
+		order: -1;
+	}
+
+	@media (min-width: 1060px) {
+		header {
+			grid-column: span 2;
+			order: 0;
+		}
 	}
 
 	article {

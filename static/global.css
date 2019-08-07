@@ -23,9 +23,21 @@ body {
 }
 
 #poet {
-	max-width: 800px;
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+header,
+footer {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main {
+	margin-bottom: 2rem;
 }
 
 h1:first-child,
