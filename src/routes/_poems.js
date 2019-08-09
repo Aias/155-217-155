@@ -18,7 +18,7 @@ export function getPoems() {
 		.map(getPoem)
 		.filter(poem => poem.meta.published)
 		.sort((a, b) => {
-			return a.meta.order - b.meta.order;
+			return Number(a.slug) - Number(b.slug);
 		});
 }
 

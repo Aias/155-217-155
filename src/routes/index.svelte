@@ -36,7 +36,7 @@
 		<section>
 			{@html html}
 		</section>
-		<small>{31 - meta.order}</small>
+		<small>{31 - Number(slug)}</small>
 	</article>
 	{/each}
 </div>
