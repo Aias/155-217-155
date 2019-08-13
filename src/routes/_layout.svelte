@@ -1,5 +1,16 @@
+<script>
+	let title = 'thirty(one) days of haiku';
+	let description = 'poems from the heart';
+	let keywords = 'haiku, poetry, Nick Trombley, syllables, love';
+</script>
+
 <svelte:head>
-	<title>thirty(one) days of haiku</title>
+	<title>{title}</title>
+	<meta property="og:title" content="{title}" />
+	<meta name="Description" content="{description}" />
+	<meta property="og:description" content="{description}" />
+	<meta name="keywords" content="{keywords}" />
+	<meta name="theme-color" content="#1b052b" />
 </svelte:head>
 
 <main>
