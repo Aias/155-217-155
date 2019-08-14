@@ -6,7 +6,7 @@ import path from 'path';
 import markdown from '../helpers/markdown';
 
 const POEMS_DIRECTORY = './src/poems';
-const siteUrl = 'https://155-217-155.netlify.com';
+const siteUrl = 'https://155-217-155.com';
 
 export function getPoems() {
 	const slugs = fs

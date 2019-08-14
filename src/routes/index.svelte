@@ -32,7 +32,7 @@
 	</header>
 	{#each poems as {slug, meta, html}}
 	<article>
-		<h4 href="{`/${slug}`}">{formatDate(meta.date)} . {meta.title}</h4>
+		<h4>{formatDate(meta.date)} . {meta.title}</h4>
 		<section>
 			{@html html}
 		</section>
