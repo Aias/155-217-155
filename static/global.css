@@ -34,6 +34,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 1rem;
 }
 
 main {
