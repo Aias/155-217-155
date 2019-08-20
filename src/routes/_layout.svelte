@@ -2,11 +2,13 @@
 	let title = 'thirty(one) days of haiku';
 	let description = 'poems from the heart';
 	let keywords = 'haiku, poetry, Nick Trombley, syllables, love';
+	let author = 'Nick Trombley';
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<meta property="og:title" content="{title}" />
+	<meta name="author" content="{author}" />
 	<meta name="Description" content="{description}" />
 	<meta property="og:description" content="{description}" />
 	<meta name="keywords" content="{keywords}" />
