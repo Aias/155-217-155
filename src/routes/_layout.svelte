@@ -1,7 +1,7 @@
 <script>
 	let title = 'thirty(one) days of haiku';
 	let description = 'poems from the heart';
-	let keywords = 'haiku, poetry, Nick Trombley, syllables, love';
+	let keywords = 'haiku, poetry, Nick Trombley, syllables, love, Japan';
 	let author = 'Nick Trombley';
 </script>
 
