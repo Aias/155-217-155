@@ -1,8 +1,8 @@
 <script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`index.json`)
-			.then(r => r.json())
-			.then(poems => {
+			.then((r) => r.json())
+			.then((poems) => {
 				return { poems };
 			});
 	}
@@ -11,7 +11,7 @@
 <script>
 	export let poems;
 
-	const formatDate = dateString => {
+	const formatDate = (dateString) => {
 		let d = new Date(dateString);
 		let year = d.getFullYear();
 		let month = ('0' + (d.getMonth() + 1)).slice(-2);
@@ -30,14 +30,14 @@
 		</h2>
 		<h3>stupid poems for an annoying girl</h3>
 	</header>
-	{#each poems as {slug, meta, html}}
-	<article>
-		<h4>{formatDate(meta.date)} . {meta.title}</h4>
-		<section>
-			{@html html}
-		</section>
-		<small>{31 - Number(slug)}</small>
-	</article>
+	{#each poems as { slug, meta, html }}
+		<article>
+			<h4>{formatDate(meta.date)} . {meta.title}</h4>
+			<section>
+				{@html html}
+			</section>
+			<small>{31 - Number(slug)}</small>
+		</article>
 	{/each}
 </div>
 

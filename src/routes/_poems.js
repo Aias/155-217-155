@@ -11,12 +11,12 @@ const siteUrl = 'https://155-217-155.com';
 export function getPoems() {
 	const slugs = fs
 		.readdirSync(POEMS_DIRECTORY)
-		.filter(file => path.extname(file) === '.md')
-		.map(file => file.slice(0, -3));
+		.filter((file) => path.extname(file) === '.md')
+		.map((file) => file.slice(0, -3));
 
 	return slugs
 		.map(getPoem)
-		.filter(poem => poem.meta.published)
+		.filter((poem) => poem.meta.published)
 		.sort((a, b) => {
 			return Number(a.slug) - Number(b.slug);
 		});
